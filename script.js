@@ -1,12 +1,16 @@
 $(document).ready(function () {
-let date = document.querySelector("#currentDay");
 
-date.textContent = moment().format("MMM Do YYYY");
+// Current date display
+
+    let date = document.querySelector("#currentDay");
+
+    date.textContent = moment().format("MMM Do YYYY");
 
 moment().hour(Number);
 
 let current = moment().hour();
-console.log(current);
+
+// Function to color time blocks according to current time
 
 $(".time-block").each(function () {
     let blockHour = parseInt($(this).parents('.row').find('.hour').attr("id"));
@@ -28,10 +32,7 @@ $(".time-block").each(function () {
 
 });
 
-
-    let buttonEl = document.querySelector(".btn");
-
-   
+// Function to listen for click on save button
 
     $(".btn").on("click", function (event) {
         
